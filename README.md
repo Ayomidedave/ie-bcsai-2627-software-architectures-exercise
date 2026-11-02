@@ -12,6 +12,32 @@ flowchart TD
     S0 --> S1 --> S2
 ```
 
+## Getting started and handing in
+
+You hand in each stage as a pull request to this repository.
+
+1. **Fork** this repository on GitHub (button "Fork", top right). You get your own copy.
+2. **Clone your fork** and install pytest:
+   ```bash
+   git clone https://github.com/<your-user>/<this-repo>.git
+   cd <this-repo>
+   pip install -r requirements.txt
+   ```
+3. **Create one branch per stage** before you start it, always from `main`:
+   ```bash
+   git checkout main
+   git checkout -b stage1          # for stage 2: git checkout -b stage2
+   ```
+4. **Commit after each step** and push the branch to your fork:
+   ```bash
+   git add .
+   git commit -m "Stage 1, step 1: persistence layer"
+   git push -u origin stage1
+   ```
+5. When all the tests of the stage are green, **open a pull request** from your branch to `main` of this original repository: on your fork, click "Contribute" and then "Open pull request". Use the title `Stage 1 - Your Name` (or `Stage 2 - Your Name`) and fill in the checklist.
+
+You open two pull requests in total, one per stage. They are not merged: they are how your work is handed in and reviewed.
+
 ## How it works: red to green
 
 Each stage is a folder with two kinds of tests:
