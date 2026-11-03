@@ -8,10 +8,10 @@ def reset():
 
 
 def save_order(order):
-    # TODO step 2: move the code from the old persistence.py here
-    raise NotImplementedError("TODO step 2")
+    order["id"] = len(orders) + 1
+    orders[order["id"]] = order
+    return order
 
 
 def find_order(order_id):
-    # TODO step 2: move the code from the old persistence.py here
-    raise NotImplementedError("TODO step 2")
+    return orders.get(order_id)
